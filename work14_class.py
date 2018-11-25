@@ -26,3 +26,6 @@ print("*" * 100)
 cat = Cat("虹猫", 10)
 cat.sleep()
 cat.introduce()
+
+
+print(cat)
