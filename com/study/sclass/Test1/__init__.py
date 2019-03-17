@@ -21,3 +21,4 @@ while True:
     elif prisonerA == "抵赖" and prisonerB == "抵赖":
         print("两人都抵赖，则各判3年")
         break
+
