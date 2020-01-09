@@ -34,19 +34,11 @@ def order_play():
         order = int(input('你要把' + players[j] + '放在第几位？（请输入数字1,2,3):'))
         dict[order] = players[j]
 
-
     print(dict)
-
-
 
 
 show_role()
 
 order_play()
 
-
-
-
-
 print(players)
-
