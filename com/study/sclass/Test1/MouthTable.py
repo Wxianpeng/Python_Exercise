@@ -3,13 +3,13 @@ class MultiplicationTable:
         self.num = num
 
     def printTable(self):
-        for i in range(2, self.num + 1):
-            for x in range(2, i + 1):
-                print('%d X %d = %d' % (i, x, i * x), end='\t')
+        for i in range(1, self.num + 1):
+            for x in range(1, i + 1):
+                print('%d X %d = %d' % (i, x, i * x), end='\t\t')
             print('  ')
 
 
-multiple = MultiplicationTable(10)
+multiple = MultiplicationTable(9)
 
 multiple.printTable()
 

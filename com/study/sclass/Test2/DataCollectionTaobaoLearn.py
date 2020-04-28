@@ -15,6 +15,7 @@ keyword = input('请输入你想要的商品信息：')
 # 报错意思  这个 chromedriver  是81版本的 ，我的浏览器是 80 版本的 ，所以要下载版本一样的。
 
 chrome_driver = r"E:\Python Space\Python_Exercise\venv\Lib\site-packages\selenium\webdriver\chrome\chromedriver.exe"
+
 driver = webdriver.Chrome(executable_path=chrome_driver)
 # 参考链接   https://blog.csdn.net/weixin_43746433/article/details/95237254
 # 进入淘宝页面
