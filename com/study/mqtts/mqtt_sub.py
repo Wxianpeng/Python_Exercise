@@ -1,9 +1,10 @@
-import time
+﻿import time
 
 import paho.mqtt.client as mqtt
 import ssl
 
-cafile = "C:/Users/UBAINS/Desktop/ca.crt"
+# 单向证书效验，只用配置一个证书即可
+cafile = "ca.crt"
 
 # certfile = "C:/Users/UBAINS/Desktop/fsdownload/Myca/server.crt"
 #
@@ -45,6 +46,7 @@ def init_client():
     for i in range(1, 500):
         time.sleep(2)
         client.publish("AA", "Time  is  " + str(time.time()), qos=0, retain=False)
+        print("第%s次发送消息" % str(i))
 
 
 init_client()
