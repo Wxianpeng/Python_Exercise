@@ -14,6 +14,12 @@
 
 import requests
 
+import threading
+import time
+# 使用 threading 模块创建线程
+import queue
+
+
 # res = requests.get(
 #     'https://localprod.pandateacher.com/python-manuscript/crawler-html/exercise/HTTP%E5%93%8D%E5%BA%94%E7%8A%B6%E6%80%81%E7%A0%81.md')
 # res.encoding = "utf-8"
@@ -22,8 +28,13 @@ import requests
 # fie.write(statusCode)
 # fie.close()
 
-photo = requests.get("https://res.pandateacher.com/2019-01-12-15-29-33.png")
-pic=photo.content
-image = open("download.png", "wb")
-image.write(pic)
-image.close()
+def run(n):
+    photo = requests.get("https://thispersondoesnotexist.com/image")
+    pic = photo.content
+    image = open("E:\Python Space\images\download" + str(n) + ".png", "wb")
+    image.write(pic)
+    image.close()
+
+
+for num in range(422, 2500):
+    run(num)
